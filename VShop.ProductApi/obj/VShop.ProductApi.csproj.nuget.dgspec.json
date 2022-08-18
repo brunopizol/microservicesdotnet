@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bcamargo\\Documents\\microservicos\\VShop.ProductApi\\VShop.ProductApi.csproj": {}
+    "C:\\Users\\bruno\\Documents\\microservicesdotnet\\VShop.ProductApi\\VShop.ProductApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bcamargo\\Documents\\microservicos\\VShop.ProductApi\\VShop.ProductApi.csproj": {
+    "C:\\Users\\bruno\\Documents\\microservicesdotnet\\VShop.ProductApi\\VShop.ProductApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bcamargo\\Documents\\microservicos\\VShop.ProductApi\\VShop.ProductApi.csproj",
+        "projectUniqueName": "C:\\Users\\bruno\\Documents\\microservicesdotnet\\VShop.ProductApi\\VShop.ProductApi.csproj",
         "projectName": "VShop.ProductApi",
-        "projectPath": "C:\\Users\\bcamargo\\Documents\\microservicos\\VShop.ProductApi\\VShop.ProductApi.csproj",
-        "packagesPath": "C:\\Users\\bcamargo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bcamargo\\Documents\\microservicos\\VShop.ProductApi\\obj\\",
+        "projectPath": "C:\\Users\\bruno\\Documents\\microservicesdotnet\\VShop.ProductApi\\VShop.ProductApi.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bruno\\Documents\\microservicesdotnet\\VShop.ProductApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bcamargo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.8, )"
