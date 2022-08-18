@@ -28,6 +28,7 @@ namespace VShop.ProductApi.Repositories
             return product;
         }
 
+
         public async Task<IEnumerable<Product>> GetAll()
         {
             return await _context.Products.ToListAsync();
