@@ -12,7 +12,7 @@ namespace VShop.ProductApi.Services
 
         public ProductService(IProductRepository productRepository, IMapper mapper)
         {
-            _productRepository = _productRepository;
+            _productRepository = productRepository;
             _mapper = mapper;
         }
 
