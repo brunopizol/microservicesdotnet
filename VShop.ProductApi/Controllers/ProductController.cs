@@ -15,15 +15,17 @@ namespace VShop.ProductApi.Controllers
             this._productService = productService;
         }
 
+        
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDTO>>> Get()
         {
-            var productsDto = await _productService.GetProducts();
-
-            if(productsDto == null) 
-                   return NotFound("products not found");
-
-            return Ok(productsDto);
+            var produtosDto = await _productService.GetProducts();
+            if (produtosDto == null)
+            {
+                return NotFound("Products not found");
+            }
+            return Ok(produtosDto);
         }
 
         [HttpGet("{id}", Name = "GetProduct")]
@@ -48,14 +50,13 @@ namespace VShop.ProductApi.Controllers
             return new CreatedAtRouteResult("GetProduct", new { id = productsDto.Id }, productsDto);
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id,[FromBody] ProductDTO productsDto)
+        [HttpPut()]
+        public async Task<ActionResult> Put([FromBody] ProductDTO productsDto)
         {
 
             if (productsDto == null)
-                return BadRequest("Categories not found");
-            if (id != productsDto.Id)
-                return BadRequest("Categories not found");
+                return BadRequest("data invalid");
+            
 
             await _productService.UpdateProduct(productsDto);
             return Ok(productsDto);
