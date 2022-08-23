@@ -13,10 +13,10 @@ namespace VShop.IdentityServer.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+         //   return View();
+        //}
 
         public IActionResult Privacy()
         {

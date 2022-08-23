@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using VShop.Web.Models;
+using VShop.Web.Roles;
 using VShop.Web.Services.Contracts;
 
 namespace VShop.Web.Controllers
@@ -47,6 +49,7 @@ namespace VShop.Web.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult>  CreateProduct(ProductViewModel productVM)
         {
             if (ModelState.IsValid)
@@ -75,6 +78,7 @@ namespace VShop.Web.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> UpdateProduct(ProductViewModel productVM)
         {
             if (ModelState.IsValid)
@@ -89,6 +93,7 @@ namespace VShop.Web.Controllers
         }
 
         [HttpGet]
+        
         public async Task<IActionResult> DeleteProduct(int id)
         {
             
@@ -99,6 +104,7 @@ namespace VShop.Web.Controllers
             return View(result);
         }
         [HttpPost(), ActionName("DeleteProduct")]
+        [Authorize(Roles = Role.Admin)]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var result = await _productService.DeleteProduct(id);
